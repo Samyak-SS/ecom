@@ -1,0 +1,83 @@
+/* Products.css */
+
+/* Container for the cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 0 1rem; /* Add some padding for smaller screens */
+    max-width: 1200px; /* Limit container width */
+    gap: 1rem; /* Add space between cards */
+}
+
+/* Apply margin-left only for larger screens */
+@media (min-width: 1024px) { /* You can adjust this breakpoint as needed */
+    .card-container {
+        margin-left: 20rem;
+    }
+}
+
+/* Individual card */
+.card {
+    margin: 0;
+    border: 2px solid #ededed;
+    padding: 1rem;
+    cursor: pointer;
+    flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Card image */
+.card-img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+/* Card title */
+.card-title {
+    margin-bottom: 0.5rem;
+}
+
+/* Card reviews */
+.card-reviews {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Ratings stars */
+.ratings-star {
+    color: #d5ab55;
+}
+
+/* Total reviews */
+.total-reviews {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+/* Card price section */
+.card-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Bag icon */
+.bag-icon {
+    color: #534343;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(50% - 2rem); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%; /* 1 card per row */
+    }
+}
